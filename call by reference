@@ -1,0 +1,23 @@
+//Pass By reference
+#include <iostream>
+using namespace std;
+class program{
+  public : int a;
+  public : program(int b){
+    a=b;
+  }
+  public : void display(){
+    cout<<"\n value of a is "<<a;
+  }
+};
+void modify(program &obj2){
+obj2.a=10;
+}
+int main() 
+{
+  program obj1(9);
+  obj1.display();
+  modify(obj1);
+  obj1.display();
+    return 0;
+}
